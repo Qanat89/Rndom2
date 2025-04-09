@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router'
 
-function NavIcon({children, name}) {
+
+
+function NavIcon({children, name, link}) {
 
   return (
-    <div className=' flex flex-col justify-center items-center gap-1 cursor-pointer'>{children}
-    <p className=' text-xs text-zinc-600'>{name}</p>
-    </div>
+    <NavLink to={link} className=' group flex flex-col justify-center items-center gap-1 cursor-pointer'>{children}
+    <p className=' text-xs text-zinc-600 group-hover:text-[#FF6633]'>{name}</p>
+    </NavLink>
   )
 }
 

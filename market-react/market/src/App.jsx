@@ -1,17 +1,16 @@
 import { useState } from 'react'
-import Butoon from './components/ui/Butoon'
+import Butoon from './components/ui/Butoon';
 import Billboard from './components/Billboard'
+import { CiHeart } from "react-icons/ci";
 import './App.css'
-import { IoMdHeartEmpty } from "react-icons/io";
 import FiveStars from './components/ui/FiveStars';
-import ProductCard from './components/ProductCard';
-import Navbar from './components/Navbar';
-import MainGridCategory from './components/MainGridCategory';
-import TwoBanner from './components/TwoBanner';
+import ProductCard from './components/cards/ProductCard';
+import Navbar from './components/ui/Navbar'
+import MainGridCategory from './components/grids/MainGridCategory';
+import TwoBanner from './components/grids/TwoBanner';
 import Map from './components/Map';
-import BlogsGrid from './components/BlogsGrid';
-import Footer from './components/Footer';
-import {  BrowserRouter, Route, Routes } from "react-router"
+import BlogsGrid from './components/grids/BlogsGrid';
+import Footer from './components/ui/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -76,7 +75,7 @@ function App() {
   ]
   return (
     <main className='w-full min-h-screen bg-[#FBF8EC]'>
-    <Navbar/>
+    
     
     
           <Billboard/>
@@ -90,7 +89,7 @@ function App() {
               <BlogsGrid/>
 
           
-    <Footer/>
+    
     </main>
   )
 }

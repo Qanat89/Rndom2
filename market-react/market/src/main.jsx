@@ -1,50 +1,48 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router'
 
 import App from './App.jsx'
-import { BrowserRouter, Route, Routes } from 'react-router'
 import CatalogsPage from './pages/CatalogsPage.jsx'
 import ContactsPage from './pages/ContactsPage.jsx'
 import CatalogPage from './pages/CatalogPage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
+import MainLayout from './components/layouts/MainLayout.jsx'
+import BreadcrumbLayout from './components/layouts/BreadcrumbLayout.jsx'
+import OrdersPage from './pages/OrdersPage.jsx'
+import FavoritesPage from './pages/FavoritesPage.jsx'
+import BasketPage from './pages/BasketPage.jsx'
+
 
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-
+  <BrowserRouter>
     <Routes>
-  <Route index element={<App/>} />
-  {/* <Route path="catalogs" element={} /> */}
+      <Route element={<MainLayout />}>
+        <Route index element={<App />} />
+        <Route element={<BreadcrumbLayout/>}>
+        <Route path="catalogs">
+          <Route index element={<CatalogsPage />} />
+          <Route path=":catalogId" element={<CatalogPage />} />
+          <Route path=":catalogId/:productId" element={<ProductPage />} />
+        </Route>
+        <Route path="contact" element={<ContactsPage />} />
+          <Route path='orders' element={<OrdersPage/>} />
+          <Route path='favorites' element={<FavoritesPage/>} />
+          <Route path='basket' element={<BasketPage/>} />
+          
+          </Route>
 
-  {/* <Route element={<AuthLayout />}>
-    <Route path="login" element={<Login />} />
-    <Route path="register" element={<Register />} />
-  </Route> */}
-  <Route path="catalogs">
-    <Route index element={<CatalogsPage/>} />
-    
-   
-
-    <Route path=':catalogId' element={<CatalogPage/>}>
+      </Route>
       
+      
+    </Routes>
+  </BrowserRouter>
+</StrictMode>
 
-    
-
-  </Route>
-  <Route path=':catalogId/:productId' element={<ProductPage/>}/>
-    <Route path="contact" element={<ContactsPage />} />
-  </Route>
-</Routes>
-
-
-
-    
-    </BrowserRouter>
-    
-  </StrictMode>,
 )
 
 

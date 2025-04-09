@@ -1,12 +1,9 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Breadcrumb from '../components/ui/BreadCrumb'
-import Footer from '../components/Footer'
-import Butoon from '../components/ui/Butoon'
-import ProductCard from '../components/ProductCard'
 
+
+import ProductCard from '../components/cards/ProductCard'
 import Filter from '../components/Filter'
-
+import Butoon from '../components/ui/Butoon'
 
 
 
@@ -90,9 +87,9 @@ id: "productOwn",
 
   return (
     <>
-    <Navbar/>
+  
     <section className=' px-32 py-8 w-full flex gap-8 flex-col min-h-screen items-start bg-[#FBF8EC]'>
-      <Breadcrumb links={links}/>
+     
       <h2 className='text-5xl font-extrabold text-[#414141]'>
         Молоко, сыр, яйца
 
@@ -125,7 +122,7 @@ id: "productOwn",
 
 
     </section>
-    <Footer/>
+   
 
     </>
   )
