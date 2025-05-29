@@ -3,8 +3,8 @@ import React from 'react'
 
 import ProductCard from '../components/cards/ProductCard'
 import Filter from '../components/Filter'
-import Butoon from '../components/ui/Butoon'
-
+import Button from '../components/ui/Button'
+import {useSelector} from "react-redux"
 
 
 
@@ -40,51 +40,8 @@ id: "productOwn",
 
   ]
 
-  const products = [
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"\\assets\\image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»"
-    },
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"\\assets\\image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»"
-    },
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"\\assets\\image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»"
-    },
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"\\assets\\image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»"
-    },
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"\\assets\\image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»"
-    },
-    {
-      priceOriginal: 50.55,
-      
-      img:"\\assets\\image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»"
-    }
-  ]
-
+  
+ const products =  useSelector((state)=>state.counter.initialProducts)
   return (
     <>
   
@@ -98,7 +55,7 @@ id: "productOwn",
   {
     types.map((a,n)=>
     (
-      <Butoon title={a.title} key={n} className=" w-fit text-sm bg-[#F3F2F1] focus:bf-[#70C05B] hover:text-white focus:text-white"/>
+      <Button title={a.title} key={n} className=" w-fit text-sm bg-[#F3F2F1] focus:bf-[#70C05B] hover:text-white focus:text-white"/>
     )
   )   
   }

@@ -12,13 +12,16 @@ import BreadcrumbLayout from './components/layouts/BreadcrumbLayout.jsx'
 import OrdersPage from './pages/OrdersPage.jsx'
 import FavoritesPage from './pages/FavoritesPage.jsx'
 import BasketPage from './pages/BasketPage.jsx'
-
+import { Provider } from 'react-redux'
+import { store } from './app/store.js'
+import AboutPage from './pages/AboutPage.jsx'
 
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Provider store={store}>
   <BrowserRouter>
     <Routes>
       <Route element={<MainLayout />}>
@@ -33,7 +36,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='orders' element={<OrdersPage/>} />
           <Route path='favorites' element={<FavoritesPage/>} />
           <Route path='basket' element={<BasketPage/>} />
-          
+           <Route path='about' element={<AboutPage/>} />
           </Route>
 
       </Route>
@@ -41,6 +44,7 @@ createRoot(document.getElementById('root')).render(
       
     </Routes>
   </BrowserRouter>
+  </Provider>
 </StrictMode>
 
 )

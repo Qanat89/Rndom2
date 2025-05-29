@@ -7,7 +7,7 @@ import { BsBoxSeam } from 'react-icons/bs'
 import { GiShoppingCart } from 'react-icons/gi'
 import DropdownUser from './DropdownUser'
 import SignButton from './SignButton'
-import { useSelector } from 'react-redux'
+import { useSelector } from "react-redux"
 
 function Navbar() {
 

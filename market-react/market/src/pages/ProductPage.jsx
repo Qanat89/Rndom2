@@ -1,7 +1,7 @@
 import React from 'react'
 
 import FiveStars from '../components/ui/FiveStars'
-import Butoon from '../components/ui/Butoon'
+import Button from '../components/ui/Button'
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FiShare2 } from 'react-icons/fi';
 import { CiCircleInfo } from "react-icons/ci";
@@ -107,8 +107,8 @@ const products = [
         <p>арт. 371431</p>
         <div className='flex flex-row items-center justify-center gap-2'><FiveStars/>
         <a className=' underline'>3 отзыва</a></div>
-        <Butoon title="Поделиться" width="md" className=" text-sm gap-4 hover:text-green-500 transition delay-100 duration-300" icon={<FiShare2 size={30}/>}/>
-        <Butoon title="В избранное" width="md" className=" text-sm gap-4 hover:text-green-500 transition delay-100 duration-300" icon={<IoMdHeartEmpty size={30}/>}/>
+        <Button title="Поделиться" width="md" className=" text-sm gap-4 hover:text-green-500 transition delay-100 duration-300" icon={<FiShare2 size={30}/>}/>
+        <Button title="В избранное" width="md" className=" text-sm gap-4 hover:text-green-500 transition delay-100 duration-300" icon={<IoMdHeartEmpty size={30}/>}/>
       </div>
       <div className='grid grid-cols-2 gap-8 w-full'>
       <div className=' grid grid-cols-8 gap-4 w-full'>

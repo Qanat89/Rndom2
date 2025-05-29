@@ -2,70 +2,13 @@ import React from 'react'
 
 import ProductCard from '../components/cards/ProductCard'
 import Filter from '../components/Filter'
-import Butoon from '../components/ui/Butoon'
+import Button from '../components/ui/Button'
+import { useSelector } from "react-redux";
+
 
 function FavoritesPage() {
 
-  const products = [
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"/assets/image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
-      id: "product1"
-    },
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"/assets/image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
-      id: "product2"
-    },
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"/assets/image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
-      id: "product3"
-    },
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"/assets/image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
-      id: "product4"
-    },
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"/assets/image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
-      id: "product5"
-    },
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"/assets/image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
-      id: "product6"
-    },
-    {
-      priceOriginal: 50.55,
-      discount:50,
-      img:"/assets/image.png",
-      price:48.58899,
-      title:"Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
-      id: "product7"
-    },
-
-   
-  ]
+  const products = useSelector((state)=>state.counter.initialProducts);
 
   const types = [
     {
@@ -95,7 +38,7 @@ function FavoritesPage() {
         {
           types.map((a, n)=>
           (
-          <Butoon title={a.title} key={n}  className="w-fit text-sm  bg-[#F3F2F1] focus:bg-[#70C05B] hover:bg-[#70C05B] hover:text-white focus:text-white  "/>
+          <Button title={a.title} key={n}  className="w-fit text-sm  bg-[#F3F2F1] focus:bg-[#70C05B] hover:bg-[#70C05B] hover:text-white focus:text-white  "/>
         
           ))
         }

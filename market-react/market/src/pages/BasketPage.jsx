@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Butoon from '../components/ui/Butoon'
+import Button from '../components/ui/Button'
 import { TbSquareMinusFilled } from 'react-icons/tb';
 import { FaTrashAlt } from 'react-icons/fa';
 import BacketCard from '../components/cards/BacketCard';

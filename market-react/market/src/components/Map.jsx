@@ -1,5 +1,5 @@
 import React from 'react'
-import Butoon from './ui/Butoon'
+import Button from './ui/Button'
 
 function Map() {
   return (
@@ -7,10 +7,10 @@ function Map() {
        <h3 className=' font-bold text-4xl w-full text-left'>Наши магазины</h3>
        <div  className=' w-full flex flex-col gap-8'>
         <div className=' w-full flex flex-row gap-4 justify-start items-center'>
-        <Butoon title="п.Щельяюр" width="md" className="  bg-[#F3F2F1] focus:bg-[#70C05B] hover:bg-[#70C05B] hover:text-white focus:text-white  "/>
-        <Butoon title="д.Вертеп " width="md" className="  bg-[#F3F2F1] focus:bg-[#70C05B] hover:bg-[#70C05B] hover:text-white focus:text-white  "/>
-        <Butoon title="с.Краснобор" width="md" className="  bg-[#F3F2F1] focus:bg-[#70C05B] hover:bg-[#70C05B] hover:text-white focus:text-white  "/>
-        <Butoon title="п.Диюр" width="md" className="  bg-[#F3F2F1] focus:bg-[#70C05B] hover:bg-[#70C05B] hover:text-white focus:text-white  "/>
+        <Button title="п.Щельяюр" width="md" className="  bg-[#F3F2F1] focus:bg-[#70C05B] hover:bg-[#70C05B] hover:text-white focus:text-white  "/>
+        <Button title="д.Вертеп " width="md" className="  bg-[#F3F2F1] focus:bg-[#70C05B] hover:bg-[#70C05B] hover:text-white focus:text-white  "/>
+        <Button title="с.Краснобор" width="md" className="  bg-[#F3F2F1] focus:bg-[#70C05B] hover:bg-[#70C05B] hover:text-white focus:text-white  "/>
+        <Button title="п.Диюр" width="md" className="  bg-[#F3F2F1] focus:bg-[#70C05B] hover:bg-[#70C05B] hover:text-white focus:text-white  "/>
 
          
             </div>

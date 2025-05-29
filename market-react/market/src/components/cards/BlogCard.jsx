@@ -1,5 +1,5 @@
 import React from 'react'
-import Butoon from '../ui/Butoon'
+import Button from '../ui/Button'
 
 function BlogCard({date, title, descShort, imgSrc}) {
   return (
@@ -10,7 +10,7 @@ function BlogCard({date, title, descShort, imgSrc}) {
     <p className=' text-sm text-left text-[#8F8F8F]'>{date}</p>
     <p className=' text-left text-lg font-bold'>{title}</p>
     <p className=' text-left'>{descShort}</p>
-    <Butoon title="Подробнее" width="md" className=" text-[#70C05B] hover:text-white bg-[#E5FFDE] hover:bg-[#70C05B]"/>
+    <Button title="Подробнее" width="md" className=" text-[#70C05B] hover:text-white bg-[#E5FFDE] hover:bg-[#70C05B]"/>
     
     </div>
    </div>

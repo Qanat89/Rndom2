@@ -1,6 +1,6 @@
 import React from 'react'
 import FiveStars from './ui/FiveStars'
-import Butoon from './ui/Butoon'
+import Button from './ui/Button'
 import Textarea from './ui/Textarea'
 
 
@@ -16,7 +16,7 @@ function CommentaryForm() {
             <FiveStars/>
        </div>
        <Textarea/>
-       <Butoon title={`Отправить отзыв`} className={` w-fit bg-[#FCD5BA] text-[#FF6633] mt-6 hover:text-[#FCD5BA] hover:bg-[#FF6633]`}/>
+       <Button title={`Отправить отзыв`} className={` w-fit bg-[#FCD5BA] text-[#FF6633] mt-6 hover:text-[#FCD5BA] hover:bg-[#FF6633]`}/>
     
    </div>
   )

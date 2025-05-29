@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ProductCard from '../cards/ProductCard'
-import Butoon from '../ui/Butoon';
+import Button from '../ui/Button';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { CiCalendar } from 'react-icons/ci';
 
@@ -50,7 +50,7 @@ function OrdersGrid({date, time, status, price, products}) {
         <div className=' flex flex-row items-center gap-6'>
             <p className='text-3xl font-mono font-normal'>{price ?? 0}₸</p>
 
-            {status === "pending" ? <Butoon title={`Когда доставит`} icon={<CiCalendar size={20} />} className={`bg-[#70C05B] hover:bg-[#FF6633] gap-3 text-sm text-white w-fit`}/> : <Butoon />}
+            {status === "pending" ? <Button title={`Когда доставит`} icon={<CiCalendar size={20} />} className={`bg-[#70C05B] hover:bg-[#FF6633] gap-3 text-sm text-white w-fit`}/> : <Butoon />}
             
 
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Butoon from './ui/Butoon'
+import Button from './ui/Button'
 import Slider from './ui/Slider'
 import { Link } from 'react-router'
 import Switch from './ui/Switch'
@@ -16,7 +16,7 @@ function Filter() {
             <p>
                 Цена
             </p>
-            <Butoon title='Очистить' width="sm" className={`bg-[#F3F2F1] text-sm transition delay-75 duration-200 hover:text-white text-zinc-500 hover:bg-green-500`}/>
+            <Button title='Очистить' width="sm" className={`bg-[#F3F2F1] text-sm transition delay-75 duration-200 hover:text-white text-zinc-500 hover:bg-green-500`}/>
         </div>
         <Slider/>
         <div className='w-full flex flex-col gap-6 text-lg mt-4 items-start'>
@@ -31,7 +31,7 @@ function Filter() {
             </Link>
             <Switch/>
         </div>
-        <Butoon title="Применить" className=" w-full text-center bg-[#FF6633] text-white hover:bg-green-500 transition delay-100 duration-300"/>
+        <Button title="Применить" className=" w-full text-center bg-[#FF6633] text-white hover:bg-green-500 transition delay-100 duration-300"/>
         
     </div>
   )
