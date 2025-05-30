@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IoCheckbox } from 'react-icons/io5'
-import { useDispatch, useSelector,  } from "react-redux";
+import Price from '../helper/Price'
+import { RxBox } from 'react-icons/rx';
+import { useDispatch, useSelector } from 'react-redux';
+import { decrement, increment, pickOrNot } from '../../features/counter/counterSlicer';
 
-function BacketCard({img='/assets/image.png', id, name, price=44.50, discount=10, count=0,empty, sum, picked}) {
+function BasketCard({img='/assets/image.png', id, name, price=44.50, discount=10, count=0,empty, sum, picked}) {
 
 const dispatch = useDispatch();
 const pickedElements = useSelector((state)=>state.counter.pickedBasket)
@@ -78,4 +81,4 @@ function handleCheck(){
   )
 }
 
-export default BacketCard
+export default BasketCard
