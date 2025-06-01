@@ -60,29 +60,9 @@ initialProducts: [
           article: 448896,
           testimonials: 0,
           ranking: 3.5
-        },
-        {
-          priceOriginal: 90.55,
-          discount:50,
-          img:"/assets/products/7.png",
-          price:79.58899,
-          title:"напиток piala ice tea манго-ананас",
-          id: "product6",
-          article: 44478632,
-          testimonials: 0,
-          ranking: 4.5
-        },
-        {
-          priceOriginal: 700.55,
-          discount:50,
-          img:"/assets/products/6.png",
-          price:599.96899,
-          title:"Lay's чипсы картофельные рифленые `лосось в сливочныом соусе`",
-          id: "product7",
-          article: 1500008,
-          testimonials: 0,
-          ranking: 1.5
-        },
+        }
+
+   
     
        
       
